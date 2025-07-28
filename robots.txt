@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://inketu.github.io/Inketu/sitemap.xml
