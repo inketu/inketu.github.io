@@ -71,3 +71,10 @@
 .table-inketu tbody tr:hover {
   background-color: #f3faff;
 }
+
+.text-lightblue{
+  color: #AEEEEE !important; 
+}
+.text-lightpurple{
+  color: #B13BFF !important; 
+}
