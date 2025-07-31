@@ -2,3 +2,27 @@ Ads 728x90
 News – 110x110 – small right side
 News – 700x435 -5 – right 4 and walking next
 News – 800x500 – 3 big ones
+
+
+
+                                <h1 class="mb-3 text-secondary text-uppercase font-weight-bold"></h1>
+                                <h2></h2>
+                                <p></p>
+
+                                <h3 class="text-uppercase font-weight-bold mb-3"></h3>
+                                <p></p>
+
+                                <h3 class="text-uppercase font-weight-bold mb-3"></h3>
+                                <p></p>
+
+                                <h3 class="text-uppercase font-weight-bold mb-3"></h3>
+                                <p></p>
+
+                                <h3 class="text-uppercase font-weight-bold mb-3"></h3>
+                                <p></p>
+
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
