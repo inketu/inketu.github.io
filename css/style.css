@@ -9692,3 +9692,10 @@ h6,
 .text-lightpurple{
   color: #B13BFF !important; 
 }
+
+@media (max-width: 767px) {
+  .news-lg {
+    aspect-ratio: auto !important;
+    flex-direction: column !important;
+  }
+}
