@@ -14,7 +14,20 @@
 
     <meta charset="utf-8">
     <title>Inketu</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="icon" type="image/png" href="https://inketu.com/img/logo.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://inketu.com/",
+        "logo": "https://inketu.com/img/logo.png"
+    }
+    </script>
+
+
+
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="keywords" content="blog, insights, articles, technology, lifestyle, questions, trends, knowledge">
     <meta name="description"
@@ -23,7 +36,7 @@
 
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <!-- <link href="img/favicon.ico" rel="icon"> -->
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -953,35 +966,35 @@
     <script src="js/main.js"></script>
 
     <!-- AJAX Script -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-$("#mc-form").on("submit", function(e) {
-    e.preventDefault();
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $("#mc-form").on("submit", function (e) {
+            e.preventDefault();
 
-    var $form = $(this);
-    var $msg = $("#mc-message");
-    $msg.html('<div class="alert alert-info mb-0">Subscribing...</div>');
+            var $form = $(this);
+            var $msg = $("#mc-message");
+            $msg.html('<div class="alert alert-info mb-0">Subscribing...</div>');
 
-    $.ajax({
-        type: "POST",
-        url: "https://inketu.us17.list-manage.com/subscribe/post-json?c=?",
-        data: $form.serialize(),
-        dataType: "jsonp",
-        contentType: "application/json; charset=utf-8",
-        error: function() {
-            $msg.html('<div class="alert alert-danger mb-0">Could not connect to the subscription server. Please try again.</div>');
-        },
-        success: function(data) {
-            if (data.result !== "success") {
-                $msg.html('<div class="alert alert-danger mb-0">' + (data.msg || "Something went wrong. Please try again.") + '</div>');
-            } else {
-                $msg.html('<div class="alert alert-success mb-0">Thanks for subscribing!</div>');
-                $form[0].reset();
-            }
-        }
-    });
-});
-</script>
+            $.ajax({
+                type: "POST",
+                url: "https://inketu.us17.list-manage.com/subscribe/post-json?c=?",
+                data: $form.serialize(),
+                dataType: "jsonp",
+                contentType: "application/json; charset=utf-8",
+                error: function () {
+                    $msg.html('<div class="alert alert-danger mb-0">Could not connect to the subscription server. Please try again.</div>');
+                },
+                success: function (data) {
+                    if (data.result !== "success") {
+                        $msg.html('<div class="alert alert-danger mb-0">' + (data.msg || "Something went wrong. Please try again.") + '</div>');
+                    } else {
+                        $msg.html('<div class="alert alert-success mb-0">Thanks for subscribing!</div>');
+                        $form[0].reset();
+                    }
+                }
+            });
+        });
+    </script>
 
 
 </body>
