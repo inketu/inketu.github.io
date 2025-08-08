@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://inketu.github.io/Inketu/sitemap.xml
+Sitemap: https://inketu.com/sitemap.xml
