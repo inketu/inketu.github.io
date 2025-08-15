@@ -13,7 +13,7 @@
     </script>
 
     <meta charset="utf-8">
-    <title>Inketu Anime Domain</title>
+    <title>Inketu</title>
     <link rel="icon" type="image/png" href="https://inketu.com/img/logo.png">
 
     <script type="application/ld+json">
@@ -129,12 +129,10 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
                 <div class="navbar-nav mr-auto py-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
                     <!-- <a href="rough.html" class="nav-item nav-link">Single</a> -->
                     <!-- <a href="DubaiLife.html" class="nav-item nav-link">Dubai</a> -->
                     <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="tech-domain.html" class="nav-item nav-link">Tech</a>
-                    <a href="anime-domain.html" class="nav-item nav-link active">Anime</a>
                     <a href="contactme.html" class="nav-item nav-link">Contact</a>
                     <a href="privacy-policy.html" class="nav-item nav-link">Privacy Policy</a>
                 </div>
@@ -154,6 +152,7 @@
     <div class="container-fluid p-0">
         <nav class="navbar navbar-expand-lg bg-light navbar-light py-2 py-lg-0 px-lg-5">
             <div class="collapse navbar-collapse justify-content-between px-0 px-lg-3" id="navbarCollapse">
+                <h1 class="test">TestPage pagination</h1>
             </div>
         </nav>
     </div>
@@ -165,6 +164,17 @@
         <div class="row">
             <div class="col-lg-7 px-0">
                 <div class="owl-carousel main-carousel position-relative">
+                    <div class="position-relative overflow-hidden" style="height: 500px;">
+                        <img class="img-fluid h-100" src="img/jiopc-setup-tv-cloud-pc-hero.jpg" style="object-fit: cover;"
+                            alt="JioPC desktop showing apps and LibreOffice on TV screen">
+                        <div class="overlay">
+                            <div class="mb-2">
+                                <!-- <a class="text-white" href="">June 16, 2025</a> -->
+                            </div>
+                            <a class="h2 m-0 text-white text-uppercase font-weight-bold"
+                                href="jiopc-cloud-pc-review.html">JioPC Review: Turn Your TV into a Cloud PC</a>
+                        </div>
+                    </div>
                     <div class="position-relative overflow-hidden" style="height: 500px;">
                         <img class="img-fluid h-100" src="img/sacred-sites-uttar-pradesh.jpg" style="object-fit: cover;"
                             alt="Pilgrims at Ram Mandir Ayodhya and Kashi Vishwanath in Uttar Pradesh">
@@ -883,6 +893,43 @@
                     <!-- Popular News End -->
                 </div>
             </div>
+            <div class="container-fluid bg-dark py-3 mt-5 mb-3">
+    <div class="container">
+        <div class="row align-items-center bg-dark">
+            <div class="col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    
+                    <!-- Previous Page -->
+                    <a id="prevPage" class="bg-primary text-dark text-center font-weight-medium py-2" 
+                       style="width: 170px; text-decoration: none;">
+                        ← Previous
+                    </a>
+                    
+                    <!-- Page Links -->
+                    <div class="d-inline-flex align-items-center ml-3" 
+                         style="width: calc(100% - 340px); padding-right: 90px; justify-content: center;">
+                        <div class="text-truncate px-2">
+                            <a class="text-white text-uppercase font-weight-semi-bold" href="index.html">1</a>
+                        </div>
+                        <div class="text-truncate px-2">
+                            <a class="text-white text-uppercase font-weight-semi-bold" href="page2.html">2</a>
+                        </div>
+                        <div class="text-truncate px-2">
+                            <a class="text-white text-uppercase font-weight-semi-bold" href="page3.html">3</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Next Page -->
+                    <a id="nextPage" class="bg-primary text-dark text-center font-weight-medium py-2" 
+                       style="width: 170px; text-decoration: none;">
+                        Next →
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         </div>
     </div>
     <!-- News With Sidebar End -->
@@ -1002,6 +1049,40 @@
             });
         });
     </script>
+    <script>
+    // List your pages in order
+    const pages = [
+        "index.html", // Page 1
+        "page2.html", // Page 2
+        "page3.html"  // Page 3
+    ];
+
+    // Get current page file name
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const currentIndex = pages.indexOf(currentPage);
+
+    // Get previous and next buttons
+    const prevBtn = document.getElementById("prevPage");
+    const nextBtn = document.getElementById("nextPage");
+
+    // Previous page link
+    if (currentIndex > 0) {
+        prevBtn.href = pages[currentIndex - 1];
+    } else {
+        prevBtn.style.pointerEvents = "none";
+        prevBtn.style.opacity = "0.6";
+        prevBtn.style.cursor = "not-allowed";
+    }
+
+    // Next page link
+    if (currentIndex < pages.length - 1) {
+        nextBtn.href = pages[currentIndex + 1];
+    } else {
+        nextBtn.style.pointerEvents = "none";
+        nextBtn.style.opacity = "0.6";
+        nextBtn.style.cursor = "not-allowed";
+    }
+</script>
 
 
 </body>
