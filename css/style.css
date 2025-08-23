@@ -9772,3 +9772,124 @@ h6,
         display: none; /* hide separator on smaller screens */
     }
 }
+
+
+
+
+
+
+
+
+
+/* MCQ EXAM CSS */
+/* ====== MCQ: Layout & Container ====== */
+  .mcq-container{font-family:Arial,Helvetica,sans-serif;background:#f8f9fa;padding:20px;border-radius:12px}
+  .mcq-title{margin:0 0 10px;text-align:center;color:#333}
+  .mcq-instructions{background:#fff;border:1px solid #e6e6e6;border-radius:10px;padding:12px 16px;margin:0 0 14px;color:#444}
+  .mcq-test-area{background:#fff;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.06);padding:16px 10px}
+  .mcq-blur{filter:blur(5px);pointer-events:none;user-select:none}
+
+  /* ====== MCQ: Question Block ====== */
+  .mcq-question{padding:14px;border-bottom:1px solid #f0f0f0}
+  .mcq-question:last-child{border-bottom:none}
+  .mcq-question p{margin:0 0 10px;font-weight:700;color:#222}
+
+  /* ====== MCQ: Options ====== */
+  .mcq-options{display:grid;gap:8px}
+  .mcq-options label{display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid #ddd;border-radius:8px;cursor:pointer;transition:background .2s,border-color .2s,box-shadow .2s}
+  .mcq-options label:hover{background:#f6fbff;border-color:#8ec8ff}
+  .mcq-options input{margin:0}
+
+  /* Highlight after submit */
+  .mcq-option-correct{background:#e8f5e9 !important;border-color:#4caf50 !important;box-shadow:0 0 0 2px rgba(76,175,80,.15) inset}
+  .mcq-option-wrong{background:#fdecea !important;border-color:#f44336 !important;box-shadow:0 0 0 2px rgba(244,67,54,.12) inset}
+
+  /* ====== MCQ: Answer reveal & per-question score ====== */
+  .mcq-answer{display:none;margin-top:10px;padding:10px;border-radius:8px;background:#f4f8ff;border:1px solid #cfe3ff;color:#0b3b7a}
+  .mcq-score-badge{display:inline-block;margin-left:6px;padding:2px 8px;border-radius:9999px;font-size:12px;font-weight:700}
+  .mcq-score-plus{background:#e8f5e9;color:#1b5e20;border:1px solid #a5d6a7}
+  .mcq-score-minus{background:#fdecea;color:#7f1d1d;border:1px solid #f5b5b1}
+  .mcq-score-zero{background:#f7f7f7;color:#444;border:1px solid #ddd}
+
+  /* ====== MCQ: Buttons ====== */
+  .mcq-controls{text-align:center;margin-top:14px}
+  .mcq-button{padding:10px 18px;margin:8px;border:none;border-radius:8px;cursor:pointer;font-size:15px;transition:transform .08s ease,background .2s}
+  .mcq-button:active{transform:translateY(1px)}
+  .mcq-button[disabled]{opacity:.5;cursor:not-allowed}
+
+  .mcq-button-start{background:#007bff;color:#fff}
+  .mcq-button-start:hover{background:#0568d1}
+  .mcq-button-submit{background:#28a745;color:#fff}
+  .mcq-button-submit:hover{background:#1f8a39}
+  .mcq-button-restart{background:#ffc107;color:#000}
+  .mcq-button-restart:hover{background:#e0ad06}
+  .mcq-button-next{background:#6f42c1;color:#fff}
+  .mcq-button-next:hover{background:#5934a6}
+
+  /* ====== MCQ: Summary ====== */
+  .mcq-summary{display:none;margin-top:14px;background:#fff;border:1px solid #ececec;border-radius:10px;padding:12px 16px;color:#222}
+  .mcq-summary h3{margin:0 0 8px;font-size:18px}
+  .mcq-summary .mcq-stats{display:flex;flex-wrap:wrap;gap:10px}
+  .mcq-tag{padding:4px 10px;border-radius:9999px;border:1px solid #e6e6e6;background:#fafafa}
+
+
+  /* =========================
+   MCQ Test Summary Styling
+   ========================= */
+.mcq-summary {
+  display: none; /* hidden by default */
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  font-family: Arial, sans-serif;
+}
+
+.mcq-summary h3 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+}
+
+.mcq-summary .mcq-stats {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mcq-summary .mcq-tag {
+  background: #f0f0f0;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #444;
+}
+
+.mcq-summary .mcq-total-score {
+  background: #333;
+  color: #fff;
+  font-weight: bold;
+}
+.mcq-instructions {
+  background: #f9f9f9;
+  border-left: 5px solid #007bff;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.mcq-instructions ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.mcq-instructions li {
+  margin-bottom: 6px;
+}
