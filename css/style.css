@@ -4673,12 +4673,12 @@ a.badge:hover, a.badge:focus {
 
 .badge-primary {
   color: #212529;
-  background-color: #FF5500;
+  background-color: #B13BFF;
 }
 
 a.badge-primary:hover, a.badge-primary:focus {
   color: #212529;
-  background-color: #cca300;
+  background-color: #C68FE6;
 }
 
 a.badge-primary:focus, a.badge-primary.focus {
@@ -9934,4 +9934,29 @@ h6,
 .subscribe-css:hover {
     transform: scale(1.05);
     text-decoration: none; /* ensure no underline on hover */
+}
+
+
+
+
+
+
+
+
+/* Image default look */
+.img-inketu-effect {
+  border: 1px solid black; /* Default border black */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effect */
+.img-inketu-effect:hover {
+  transform: scale(1.02); /* Slight zoom */
+  border-color: white !important; /* Border turns white */
+  box-shadow: 0 0 12px white; /* White glow */
+}
+
+/* Wrapper to prevent zoom overflow */
+.img-inketu-wrapper {
+  overflow: hidden;
 }
